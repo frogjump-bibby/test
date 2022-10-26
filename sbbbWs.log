@@ -1,0 +1,93 @@
+
+[2022-10-21 10:40:13] [default task-512] [INFO ] [t.c.s.s.w.c.TxnApiController] - 202210210030278 ::: JsonParam :: 
+{
+  "uuid" : "202210210030278",
+  "txnNo" : "P014",
+  "data" : "{\"transType\":\"P014\",\"lineId\":\"EB\",\"inqYmd\":null,\"inqTime\":null,\"empno\":\"90409\",\"cur\":\"0\"}"
+}
+[2022-10-21 10:40:13] [default task-512] [INFO ] [t.c.s.s.w.c.TxnApiController] - 202210210030278 :::: SEND ::: 
+	txn          : [P014]
+	txnHostName  : [10.1.4.250]
+	txnPort      : [5012]
+	txnSend     :: {
+  "transType" : "P014",
+  "lineId" : "EB",
+  "inqYmd" : null,
+  "inqTime" : null,
+  "empno" : "90409",
+  "cur" : "0"
+}
+[2022-10-21 10:40:13] [default task-512] [INFO ] [t.c.s.s.w.component.SocketClientBean] - 202210210030278 ::: Begin :: socketPool : d39688c8-d859-48c9-9e23-0af8899bb0a0
+[2022-10-21 10:40:13] [default task-512] [INFO ] [t.c.s.s.w.component.SocketClientBean] - 202210210030278 ::: Send :: 
+	hostName        : [10.1.4.250]
+	port            : [5012]
+	txnBusinessName : [EB1]
+	txnTradeId      : [1]
+	txnHeader       : [00000000000000000000EB1  0000100000000000000000000000026]
+	txnContext      : [P014EB00000000000000904090]
+	txnBytes (Len)  : [87]
+[2022-10-21 10:40:13] [default task-512] [DEBUG] [t.c.s.s.w.process.impl.SocketProcess] - 202210210030278 :: being : 
+	HostName               : [10.1.4.250]
+	Port                   : [5012]
+	Prefix len (Send)      : [5]
+	Prefix len (Reply)     : [5]
+	Length (Header + Body) : [82]
+	Header                 : [00000000000000000000EB1  0000100000000000000000000000026]
+	Body                   : [P014EB00000000000000904090]
+	Send                   : [0008200000000000000000000EB1  0000100000000000000000000000026P014EB00000000000000904090]
+[2022-10-21 10:40:13] [default task-512] [INFO ] [t.c.s.s.w.process.impl.SocketProcess] - 202210210030278 ::: receive :: 
+	HostName             : [10.1.4.250]
+	Port                 : [5012]
+	Charset              : [BIG5]
+	Prefix5code          : [04152]
+	PrefixIgrnoeCode     : [null]
+	Receive context      : [00000000000000000000EB1  0000100000000000000000000004096P014EB11110211040120904090���000�������   < ���                                  045000100000100000200000002000004000004000008000                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ]
+	Receive length       : [4152]
+	Receive byte length  : [4152]
+[2022-10-21 10:40:13] [default task-512] [DEBUG] [t.c.s.s.w.component.SocketClientBean] - 202210210030278 :: socketProcess execute : done
+[2022-10-21 10:40:13] [default task-512] [INFO ] [t.c.s.s.w.c.TxnApiController] - 202210210030278 ::::: REPLY :::: P014Reply ::: 
+
+-- #1/3 ---
+202210210030278 :: Socket Receive        : [00000000000000000000EB1  0000100000000000000000000004096P014EB11110211040120904090���000�������   < ���                                  045000100000100000200000002000004000004000008000                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ]
+
+-- #2/3 ---
+202210210030278 :: Response Header : 
+{
+  "BusName" : "EB1",
+  "TimeSeq" : "000000000000000",
+  "TranDirection" : "00",
+  "TitaReturnCode" : "0000",
+  "TitaLen" : "04096",
+  "Filler" : "0000000000",
+  "SessionId" : "0000000000",
+  "TranId" : "00001"
+}
+
+-- #3/3 ---
+202210210030278 :: tw.com.sunnybank.sbbb.ws.txn.reply.P014Reply@65debca8[
+  advisory=4090☆☆00☆☆☆☆  < ☆☆
+  cardTwdAmt=045000
+  cardUsdAmt=002000
+  code=090
+  inqTime=104012
+  inqYmd=1111021
+  lineId=EB
+  transType=P014
+  usbTwdAmt=100000
+  usbUsdAmt=004000
+  yearTwdAmt1=100000
+  yearTwdAmt2=200000
+  yearUsdAmt1=004000
+  yearUsdAmt2=008000
+]
+
+[2022-10-21 10:40:13] [default task-512] [INFO ] [t.c.s.s.w.c.TxnApiController] - 202210210030278 ::: Result :: 
+{
+  "txnNo" : "P014",
+  "uuid" : "202210210030278",
+  "returnCode" : "CODE_0000",
+  "returnMessage" : null,
+  "replyCode" : "090",
+  "encryptType" : "BASE64",
+  "data" : "eyJ0cmFuc1R5cGUiOiJQMDE0IiwibGluZUlkIjoiRUIiLCJpbnFZbWQiOiIxMTExMDIxIiwiaW5xVGltZSI6IjEwNDAxMiIsImNvZGUiOiIwOTAiLCJhZHZpc29yeSI6IjQwOTDimIbimIYwMOKYhuKYhuKYhuKYhlx1MDAwMFx1MDAwMDxcdTAwMDBcdTAwMTPimIbimIYiLCJjYXJkVHdkQW10IjoiMDQ1MDAwIiwidXNiVHdkQW10IjoiMTAwMDAwIiwieWVhclR3ZEFtdDEiOiIxMDAwMDAiLCJ5ZWFyVHdkQW10MiI6IjIwMDAwMCIsImNhcmRVc2RBbXQiOiIwMDIwMDAiLCJ1c2JVc2RBbXQiOiIwMDQwMDAiLCJ5ZWFyVXNkQW10MSI6IjAwNDAwMCIsInllYXJVc2RBbXQyIjoiMDA4MDAwIn0="
+{
