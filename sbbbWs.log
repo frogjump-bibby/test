@@ -91,3 +91,109 @@
   "encryptType" : "BASE64",
   "data" : "eyJ0cmFuc1R5cGUiOiJQMDE0IiwibGluZUlkIjoiRUIiLCJpbnFZbWQiOiIxMTExMDIxIiwiaW5xVGltZSI6IjEwNDAxMiIsImNvZGUiOiIwOTAiLCJhZHZpc29yeSI6IjQwOTDimIbimIYwMOKYhuKYhuKYhuKYhlx1MDAwMFx1MDAwMDxcdTAwMDBcdTAwMTPimIbimIYiLCJjYXJkVHdkQW10IjoiMDQ1MDAwIiwidXNiVHdkQW10IjoiMTAwMDAwIiwieWVhclR3ZEFtdDEiOiIxMDAwMDAiLCJ5ZWFyVHdkQW10MiI6IjIwMDAwMCIsImNhcmRVc2RBbXQiOiIwMDIwMDAiLCJ1c2JVc2RBbXQiOiIwMDQwMDAiLCJ5ZWFyVXNkQW10MSI6IjAwNDAwMCIsInllYXJVc2RBbXQyIjoiMDA4MDAwIn0="
 {
+
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+
+[2022-10-21 10:42:13] [default task-511] [INFO ] [t.c.s.s.w.c.TxnApiController] - 202210210030280 ::: JsonParam :: 
+{
+  "uuid" : "202210210030280",
+  "txnNo" : "P015",
+  "data" : "{\"transType\":\"P015\",\"lineId\":\"EB\",\"inqYmd\":null,\"inqTime\":null,\"empno\":\"90409\",\"empcode\":null,\"cur\":\"0\",\"type\":\"0\",\"cardTwdAmt\":\"45000\",\"usbTwdAmt\":\"100000\",\"yearTwdAmt1\":\"100000\",\"yearTwdAmt2\":\"200000\",\"cardUsdAmt\":\"2000\",\"usbUsdAmt\":\"4000\",\"yearUsdAmt1\":\"4000\",\"yearUsdAmt2\":\"8000\",\"mgrNo\":\"90409\",\"mgrCode\":null}"
+}
+[2022-10-21 10:42:13] [default task-511] [INFO ] [t.c.s.s.w.c.TxnApiController] - 202210210030280 :::: SEND ::: 
+	txn          : [P015]
+	txnHostName  : [10.1.4.250]
+	txnPort      : [5012]
+	txnSend     :: {
+  "transType" : "P015",
+  "lineId" : "EB",
+  "inqYmd" : null,
+  "inqTime" : null,
+  "empno" : "90409",
+  "empcode" : null,
+  "cur" : "0",
+  "type" : "0",
+  "cardTwdAmt" : "45000",
+  "usbTwdAmt" : "100000",
+  "yearTwdAmt1" : "100000",
+  "yearTwdAmt2" : "200000",
+  "cardUsdAmt" : "2000",
+  "usbUsdAmt" : "4000",
+  "yearUsdAmt1" : "4000",
+  "yearUsdAmt2" : "8000",
+  "mgrNo" : "90409",
+  "mgrCode" : null
+}
+[2022-10-21 10:42:13] [default task-511] [INFO ] [t.c.s.s.w.component.SocketClientBean] - 202210210030280 ::: Begin :: socketPool : d39688c8-d859-48c9-9e23-0af8899bb0a0
+[2022-10-21 10:42:13] [default task-511] [INFO ] [t.c.s.s.w.component.SocketClientBean] - 202210210030280 ::: Send :: 
+	hostName        : [10.1.4.250]
+	port            : [5012]
+	txnBusinessName : [EB1]
+	txnTradeId      : [1]
+	txnHeader       : [00000000000000000000EB1  0000100000000000000000000000096]
+	txnContext      : [P015EB0000000000000090409    004500000100000001000000020000000200000400000400000800000090409    ]
+	txnBytes (Len)  : [157]
+[2022-10-21 10:42:13] [default task-511] [DEBUG] [t.c.s.s.w.process.impl.SocketProcess] - 202210210030280 :: being : 
+	HostName               : [10.1.4.250]
+	Port                   : [5012]
+	Prefix len (Send)      : [5]
+	Prefix len (Reply)     : [5]
+	Length (Header + Body) : [152]
+	Header                 : [00000000000000000000EB1  0000100000000000000000000000096]
+	Body                   : [P015EB0000000000000090409    004500000100000001000000020000000200000400000400000800000090409    ]
+	Send                   : [0015200000000000000000000EB1  0000100000000000000000000000096P015EB0000000000000090409    004500000100000001000000020000000200000400000400000800000090409    ]
+[2022-10-21 10:42:13] [default task-511] [INFO ] [t.c.s.s.w.process.impl.SocketProcess] - 202210210030280 ::: receive :: 
+	HostName             : [10.1.4.250]
+	Port                 : [5012]
+	Charset              : [BIG5]
+	Prefix5code          : [04152]
+	PrefixIgrnoeCode     : [null]
+	Receive context      : [00000000000000000000EB1  0000100000000000000000000004096P015EB1111021104212090409       0045000001000000                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ]
+	Receive length       : [4152]
+	Receive byte length  : [4152]
+[2022-10-21 10:42:13] [default task-511] [DEBUG] [t.c.s.s.w.component.SocketClientBean] - 202210210030280 :: socketProcess execute : done
+[2022-10-21 10:42:13] [default task-511] [INFO ] [t.c.s.s.w.c.TxnApiController] - 202210210030280 ::::: REPLY :::: P015Reply ::: 
+
+-- #1/3 ---
+202210210030280 :: Socket Receive        : [00000000000000000000EB1  0000100000000000000000000004096P015EB1111021104212090409       0045000001000000                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ]
+
+-- #2/3 ---
+202210210030280 :: Response Header : 
+{
+  "BusName" : "EB1",
+  "TimeSeq" : "000000000000000",
+  "TranDirection" : "00",
+  "TitaReturnCode" : "0000",
+  "TitaLen" : "04096",
+  "Filler" : "0000000000",
+  "SessionId" : "0000000000",
+  "TranId" : "00001"
+}
+
+-- #3/3 ---
+202210210030280 :: tw.com.sunnybank.sbbb.ws.txn.reply.P015Reply@5583beeb[
+  advisory=409       0045000001000000
+  code=090
+  inqTime=104212
+  inqYmd=1111021
+  lineId=EB
+  transType=P015
+]
+
+[2022-10-21 10:42:13] [default task-511] [INFO ] [t.c.s.s.w.c.TxnApiController] - 202210210030280 ::: Result :: 
+{
+  "txnNo" : "P015",
+  "uuid" : "202210210030280",
+  "returnCode" : "CODE_0000",
+  "returnMessage" : null,
+  "replyCode" : "090",
+  "encryptType" : "BASE64",
+  "data" : "eyJ0cmFuc1R5cGUiOiJQMDE1IiwibGluZUlkIjoiRUIiLCJpbnFZbWQiOiIxMTExMDIxIiwiaW5xVGltZSI6IjEwNDIxMiIsImNvZGUiOiIwOTAiLCJhZHZpc29yeSI6IjQwOSAgICAgICAwMDQ1MDAwMDAxMDAwMDAwIn0="
+}
+
+
+
